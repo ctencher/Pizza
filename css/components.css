@@ -15,7 +15,7 @@
   text-align: center;
   letter-spacing: .02em;
   box-shadow: 0px 0px 38px 0px rgba(212, 66, 50, 0.8);
-  transition: background .2s;
+  transition: color .2s, background .2s, opacity .2s;
 }
 
 .btn:hover {
@@ -46,7 +46,7 @@
   border: 3px solid #fff;
   padding: 8px 16px;
   border-radius: 21.5px;
-  transition: all .2s;
+  transition: color .2s, background .2s, opacity .2s;
 }
 
 .phone_item:hover {
@@ -112,3 +112,117 @@ btn-menu
  .btn-menu__inner::after {
    bottom: -10px;
  }
+
+ /* section  */
+
+ .section {
+   padding: 110px 0;
+ }
+
+ @media (max-width: 576px) {
+   .section
+ {
+   padding: 90px 0;
+ }
+}
+
+.section-title {
+  font-size: 48px;
+  text-align: center;
+  margin: 0 auto 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+.section-title--accent {
+  color: #ffa650;
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+.catalog-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-nav__wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+  overflow: hidden;
+}
+
+.catalog-nav__btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  min-width: 150px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 900;
+  color: #e6e6e6;
+  border-right: 1px solid #e5e5e5;
+  transition: border .2s , background .2s , color .2s;
+}
+
+.catalog-nav__btn.is-active {
+  background: #1f1f1f;
+  color: #fff;
+  border-color: #1f1f1f;
+}
+
+.catalog-nav__btn:not(.is-active):hover {
+  background: #ffa650;
+  color: #fff;
+  border-right-color: #ffa650;
+}
+
+.catalog-nav__item:last-of-type .catalog-nav__btn {
+  border-right: 0;
+}
+
+@media (max-width: 767px) {
+  .catalog-nav {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .catalog-nav__wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .catalog-nav__item {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+
+  .catalog-nav__btn {
+  min-width: 0;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  }
+  .catalog-nav__item:nth-of-type(1) .catalog-nav__btn,
+  .catalog-nav__item:nth-of-type(2) .catalog-nav__btn {
+    border-right: 0;
+  }
+  .catalog-nav__item:nth-of-type(even) .catalog-nav__btn {
+    border-right: 0;
+  }
+}
+
+.catalog-item {
+  display: flex;
+}

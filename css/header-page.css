@@ -56,7 +56,7 @@
 }
 .header-page__text {
     position: relative;
-     transition: all .2s;
+    transition: color .2s;
 }
 
 .header-page__link:hover::before {
